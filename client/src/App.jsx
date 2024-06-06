@@ -22,7 +22,7 @@ const App = () => {
 export default App;
 
 //jsx have only one parent element
-// React.Fragment   <div>jello</div>;
+// React.Fragment   <div>hello</div>;
 //{} to write javascript inside html
 //props
 
