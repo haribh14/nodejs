@@ -5,6 +5,6 @@ import { verifyToken } from "../middlewares/authMiddleware.js";
 const router = express.Router();
 
 router.post("/book", verifyToken, createBook);
-router.get("/allbooks",getAllBook);
+router.get("/books",getAllBook);
 
 export default router;

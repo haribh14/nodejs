@@ -25,7 +25,6 @@ export const createBook = async (req, res) => {
     throw new CustomError("Internal Server Error !", 500);
   }
 };
-
 export const getAllBook = async (req, res) => {
   try {
     const books = await Book.find();
