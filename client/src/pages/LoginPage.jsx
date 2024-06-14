@@ -8,6 +8,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const[error, setError] = useState("");
 
   const navigate = useNavigate();
 
@@ -19,10 +20,15 @@ const LoginPage = () => {
         email,
         password,
       });
+      const {token} = await res.data;
+      sessionStorage.setItem("token",token);
+      setError("");
       navigate("/");
       setLoading(false);
-      console.log(res);
+      console.log(res);//----
     } catch (error) {
+      setError(error.response.data.message || "an error occurred");
+  
       setLoading(false);
       console.log(error);
     }
@@ -56,6 +62,7 @@ const LoginPage = () => {
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         />
       </form>
+      <p className="text-red-600">{error}</p>
       <p className="mb-4">Don't have an account?</p>
       <Link className="text-blue-500 hover:text-blue-700" to={"/register"}>
         Click to register here!

@@ -24,3 +24,31 @@ const Navbar = () => {
   };
   
   export default Navbar;
+
+
+  // { isAdmin ? hello admin : you are not admin}
+// if(isAdmin){
+//   hello admin
+// }else{
+//   you are not admin
+// }
+
+// {token ? (<></>):(<></>)}
+
+// {
+//   token ? (
+//     <>
+//       <li>Welcome</li>
+//       <button onClick={handleLogout}>Logout</button>
+//     </>
+//   ) : (
+//     <>
+//       <Link to={"/login"}>
+//         <li>Login</li>
+//       </Link>
+//       <Link to={"/register"}>
+//         <li>Register</li>
+//       </Link>
+//     </>
+//   );
+// }
