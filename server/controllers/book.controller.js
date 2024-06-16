@@ -34,3 +34,13 @@ export const getAllBook = async (req, res) => {
   }
 };
 
+
+export const getBookById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const books = await Book.findById(id);
+    res.status(200).json(books);
+  } catch (error) {
+    throw new CustomError("Internal Server Error !", 500);
+  }
+};

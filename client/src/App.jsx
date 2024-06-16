@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import PrivateRoute from "./protected/PrivateRoute";
 import NotFound from "./components/Notfound";
+import BookDetails from "./pages/BookDetails";  //----
 
 const App = () => {
   return (
